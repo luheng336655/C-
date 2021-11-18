@@ -1,0 +1,43 @@
+#pragma once
+//student.h
+class Student
+{
+public:
+	void set_value();
+	void display();
+private:
+	int num;
+	char name[20];
+	char sex;
+};
+
+//student.cpp
+#include <iostream>
+#include "student.h"
+using namespace std;
+void Student::set_value()
+{
+	cout << "输入学号、名字、性别:" << endl;
+	cin >> num;
+	cin >> name;
+	cin >> sex;
+	cout << endl;
+}
+void Student::display()
+{
+	cout << "学号:"<<num << endl;
+	cout << "名字:"<<name << endl;
+	cout << "性别:"<<sex << endl;
+}
+
+//main.cpp
+#include "student.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	Student st;
+	st.set_value();
+	st.display();
+	return 0;
+}
